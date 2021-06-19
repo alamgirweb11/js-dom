@@ -9,10 +9,12 @@ list.addEventListener('dblclick', function(event){
                 event.target.appendChild(inputBox);
 
                inputBox.addEventListener('keypress', function(e){
-                      if(e.key == 'Enter'){
-                            e.target.innerHTML = e.target.value;
-                      }
+                      if(e.key === 'Enter'){
+                            event.target.innerHTML = e.target.value;
+
+                  }
                })
+
         }
 });
 
@@ -22,6 +24,5 @@ function createInputBox(value){
             inputField.type = 'text';
             inputField.className = 'form-control';
             inputField.value = value;
-
             return inputField;
 }
